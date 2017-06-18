@@ -1,8 +1,15 @@
 .App {
     text-align: center;
-    height: 1000px;
+    height: 100%;
     width: 100%;
-    font-size: 950%;
+    display: block;
+    position: absolute;
+    top: -1px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    font-size: 850%;
     background-color: blue;
     color: white;
 }
@@ -10,5 +17,16 @@
     color: white;
 }
 .App-Number{
-	font-size: 300%;
+	font-size: 150%;
+}
+body {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: -1px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
 }

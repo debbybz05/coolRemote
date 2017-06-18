@@ -23,6 +23,7 @@ class App extends Component {
                 onSwipingDown={this.down}
                 flickThreshold={0.6}
                 delta ={50} >
+                
                 <div style={{background: color}} className="App">
                     <div className="col-lg-12 col-md-12 col-sm-12">
                         <div className="Arrow">
@@ -46,11 +47,10 @@ class App extends Component {
                             </a>
                         </div>
                     </div>
-                </div>   
-            </Swipeable>
+                </div>
+            </Swipeable>  
         );
     }
-  
     up(event){
         let jump=this.state.jump;
         if(jump%5===0){
