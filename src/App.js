@@ -7,8 +7,8 @@ class App extends Component {
 
     constructor(props) {
         super(props);
-        this.Up = this.Up.bind(this);
-        this.Down = this.Down.bind(this);
+        this.up = this.up.bind(this);
+        this.down = this.down.bind(this);
         this.increase = this.increase.bind(this);
         this.decrease = this.decrease.bind(this);
         this.state = {number: 25, jump:1};
@@ -19,8 +19,8 @@ class App extends Component {
         let color=colors[number-15];
         return (
             <Swipeable trackMouse={true} 
-                onSwipingUp={this.Up}
-                onSwipingDown={this.Down}
+                onSwipingUp={this.up}
+                onSwipingDown={this.down}
                 flickThreshold={0.6}
                 delta ={50} >
                 <div style={{background: color}} className="App">
@@ -36,7 +36,7 @@ class App extends Component {
                             }
                         </div>
                     </div>
-                    <div className="col-lg-12 col-md-12 col-sm-12" style={{fontSize: 300}}>
+                    <div className="App-Number">
                         {number}
                     </div>
                     <div className="col-lg-12 col-md-12 col-sm-12">
@@ -51,14 +51,14 @@ class App extends Component {
         );
     }
   
-    Up(event){
+    up(event){
         let jump=this.state.jump;
         if(jump%5===0){
             this.increase();
         }
         this.setState({jump:++jump});
     }
-    Down(event){
+    down(event){
         let jump=this.state.jump;
         if(jump%5===0){
             this.decrease();

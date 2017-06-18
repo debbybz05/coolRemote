@@ -2,11 +2,13 @@
     text-align: center;
     height: 1000px;
     width: 100%;
-    background-color: blue;
-    padding: 20px;
     font-size: 950%;
+    background-color: blue;
     color: white;
 }
 .Arrow{
     color: white;
+}
+.App-Number{
+	font-size: 300%;
 }
